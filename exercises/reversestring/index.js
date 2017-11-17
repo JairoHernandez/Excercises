@@ -11,7 +11,7 @@ function reverse(str) {
     return str.split('').reduce((reversed, character) => character + reversed, '');
 }
 
-console.log(reverse('jairo')); // oriaj
+// console.log(reverse('jairo')); // oriaj
 module.exports = reverse;
 
 // SOULUTION 1
@@ -44,9 +44,8 @@ module.exports = reverse;
 // function reverse(str) {
 //     let reversed = '';
 
-//     for (var x=str.length-1; x >= 0; x--) {
-//         reversed = reversed + str[x];
-//         console.log(reversed);
+//     for (var x=0; x < str.length; x++) {
+//         reversed = str[x] + reversed;
 //     }
 //     return reversed;
 // }

@@ -1,0 +1,8 @@
+~/INTERVIEW/Excercises$ npm install -g jest
+
+You have to be right in execises folder to run correctly.
+~/INTERVIEW/Excercises/exercises$ jest reversestring/test.js --watch
+
+1. reversestring
+2. palindrome
+3. reverseint

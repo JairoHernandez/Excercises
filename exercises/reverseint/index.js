@@ -10,13 +10,18 @@
 
 function reverseInt(n) {
 
-    const reversed = n.toString().split('').reverse().join('');
+    const reversed = n.toString().split('').reverse().join(''); // 51-
     
-    if (n < 0) {
-        return parseInt(reversed) * -1;
-    }
-    return parseInt(reversed);
+    // SOLUTION 1
+    // if (n < 0) {
+    //     return parseInt(reversed) * -1;
+    // }
+    // return parseInt(reversed);
+
+    // SOLUTION 2
+    return parseInt(reversed) * Math.sign(n); 
+
 }
 
-console.log(reverseInt(15));
+console.log(reverseInt(-15));
 module.exports = reverseInt;

@@ -6,3 +6,8 @@ You have to be right in execises folder to run correctly.
 1. reversestring
 2. palindrome
 3. reverseint
+4. maxchar
+5. fizzbuzz
+6. chunk
+7. anagrams (likely to be asked)
+8. Capitalization

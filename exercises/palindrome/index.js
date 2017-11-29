@@ -9,11 +9,11 @@
 
 function palindrome(str) {
 
-    // SOLUTION 1
-    // reversed = str.split('').reverse().join('');
-    // return str === reversed;
+    // *SOLUTION 1
+    reversed = str.split('').reverse().join('');
+    return str === reversed;
 
-    // SOLUTION 2
+    // *SOLUTION 2
     // reversed = '';
     // for (let character of str) {
     //     reversed = character + reversed;
@@ -29,9 +29,9 @@ function palindrome(str) {
 
     // SOLUTION 4 (where i is the 1st element in the array. 
     // After every call i moves on to next element.
-    return str.split('').every((char, i) => {
-        return char === str[str.length - i -1];
-    });
+    // return str.split('').every((char, i) => {
+    //     return char === str[str.length - i -1];
+    // });
 
     
 }

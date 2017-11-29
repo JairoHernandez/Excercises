@@ -6,7 +6,7 @@
 //   reverse('hello') === 'olleh'
 //   reverse('Greetings!') === '!sgniteerG'
 
-// SOLUTION 4
+// *SOLUTION 4
 function reverse(str) {
     return str.split('').reduce((reversed, character) => character + reversed, '');
 }
@@ -28,7 +28,7 @@ module.exports = reverse;
 //     return str.split('').reverse().join('');
 // }
 
-// SOLUTION 2
+// *SOLUTION 2 (LINEAR RUNTIME)
 // function reverse(str) {
 //     let reversed = '';
 

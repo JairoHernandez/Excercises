@@ -24,9 +24,12 @@ function maxChar(str) {
 
     // Iterate an object by using 'let char in'
     for (let char in charMap) { // char is the key.
-        // console.log(char);
+        console.log(char); // H
+                           // e
+                           // l
+                           // o
         if (charMap[char] > max) {
-            max = charMap[char];
+            max = charMap[char]; // keep track of max count of the character
             maxChar = char; // maxChar is now that character.
         }
     }

@@ -10,6 +10,7 @@
 
 function reverseInt(n) {
 
+    // console.log(n.toString().split('')); // [ '-', '1', '5' ]
     const reversed = n.toString().split('').reverse().join(''); // 51-
     
     // SOLUTION 1
@@ -18,7 +19,7 @@ function reverseInt(n) {
     // }
     // return parseInt(reversed);
 
-    // SOLUTION 2
+    // *SOLUTION 2
     return parseInt(reversed) * Math.sign(n); 
 
 }

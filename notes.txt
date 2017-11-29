@@ -3,11 +3,26 @@
 You have to be right in execises folder to run correctly.
 ~/INTERVIEW/Excercises/exercises$ jest reversestring/test.js --watch
 
-1. reversestring
+1. reversestring (LINEAR RUNTIME)
 2. palindrome
 3. reverseint
-4. maxchar
+4. maxchar // Iterate an object by using 'let char in'
 5. fizzbuzz
 6. chunk
 7. anagrams (likely to be asked)
-8. Capitalization
+8. capitalize
+9. steps
+10. pyramid
+11. vowels
+12.
+
+Runtime complexity describes how performant an algorithm is.
+    How much more processing power/time is required to run  your algorithm if we double/increase the inputs?
+    reversestring (LINEAR RUNTIME because it had one basic for loop aka 1-to-1 relationship between amount work to do versus the input)
+    steps had more than one for loop and were nested, which is N^N(quadratic runtime)
+    NEVER suggest exponential time for Determining Complexity. 
+
+Memoization can dramatically increase performance for recursion code. 
+It avoids calling the same function multiple times with the same set of arguments each time.
+
+Queue Class uses an array 

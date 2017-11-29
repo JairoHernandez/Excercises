@@ -5,3 +5,11 @@ function reverse(str) {
 }
 
 console.log(reverse('jairo'));
+
+
+function jairo(...args) {
+    console.log(args);
+    console.log(args[args.length - 1]);
+}
+
+jairo('1', '2', '3');

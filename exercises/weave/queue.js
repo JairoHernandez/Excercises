@@ -16,6 +16,17 @@ class Queue {
   remove() {
     return this.data.pop();
   }
+
+  peek() {
+    return this.data[this.data.length - 1];
+  }
 }
 
+queue = new Queue();
+queue.add(22);
+queue.add(33);
+console.log(queue.data); // [ 33, 22 ]
+console.log('peek: ' + queue.peek()); // peek: 22
+console.log('remove: ' + queue.remove()); // 22
+console.log(queue.data); // [ 33 ]
 module.exports = Queue;

@@ -3,7 +3,7 @@
 // 2) Implement the 'weave' function.  Weave
 // receives two queues as arguments and combines the
 // contents of each into a new, third queue.
-// The third queue should contain the *alterating* content
+// The third queue should contain the *alternating* content
 // of the two queues.  The function should handle
 // queues of different lengths without inserting
 // 'undefined' into the new one.
@@ -24,6 +24,22 @@
 
 const Queue = require('./queue');
 
-function weave(sourceOne, sourceTwo) {}
+function weave(sourceOne, sourceTwo) {
 
+    const q = new Queue(); // 3rd queue
+
+    while ( sourceOne.peek() || sourceTwo.peek() ) { // Prevents placing undefined into the new 3rd queue.
+        if (sourceOne.peek()) {
+            q.add(sourceOne.remove());
+        }
+
+        if (sourceTwo.peek()) {
+            q.add(sourceTwo.remove());
+        }
+    }
+
+    return q;
+}
+
+// No console since not sure where the parameters(queues) for function weave are coming from.
 module.exports = weave;

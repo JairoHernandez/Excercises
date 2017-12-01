@@ -26,7 +26,7 @@ queue = new Queue();
 queue.add(22);
 queue.add(33);
 console.log(queue.data); // [ 33, 22 ]
-console.log('peek: ' + queue.peek()); // peek: 22
+console.log('peek: ' + queue.peek()); // peek: 22 (return record without removing it)
 console.log('remove: ' + queue.remove()); // 22
 console.log(queue.data); // [ 33 ]
 module.exports = Queue;

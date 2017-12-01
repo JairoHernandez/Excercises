@@ -14,7 +14,10 @@ You have to be right in execises folder to run correctly.
 9. steps
 10. pyramid
 11. vowels
-12.
+12. matrix spiral
+13. Runtime Complexity Fibonacci
+14. Queue
+15. Queue Weaving.
 
 Runtime complexity describes how performant an algorithm is.
     How much more processing power/time is required to run  your algorithm if we double/increase the inputs?
@@ -26,3 +29,11 @@ Memoization can dramatically increase performance for recursion code.
 It avoids calling the same function multiple times with the same set of arguments each time.
 
 Queue Class uses an array 
+
+Big difference between a queue and a stack is the order in which the items are removed.
+    - Queue is FIFO.
+    - Stack is FILO.
+        Stack Methods:
+            - push: Add a record to the stack.
+            - pop: Remove the "top" record in the stack.
+            - peek: Return the "top" record without popping it.

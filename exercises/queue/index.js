@@ -14,7 +14,7 @@ class Queue {
   }
 
   add(record) {
-      this.data.unshift(record); // unshift always add to the front(left side) of the array first.
+      this.data.unshift(record); // unshift inserts at front(left side) of the array first.
   }
 
   remove() {
@@ -24,5 +24,8 @@ class Queue {
 
 queue = new Queue();
 queue.add(22);
+queue.add(33);
+console.log(queue.data); // [ 33, 22 ]
 console.log(queue.remove()); // 22
+console.log(queue.data); // [ 33 ]
 module.exports = Queue;

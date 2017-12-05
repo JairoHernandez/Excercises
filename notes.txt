@@ -1,3 +1,5 @@
+stephengrider.github.io/JSPlaygrounds
+
 ~/INTERVIEW/Excercises$ npm install -g jest
 
 You have to be right in execises folder to run correctly.

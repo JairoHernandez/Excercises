@@ -12,7 +12,7 @@ class Node {
 
 class LinkedList {
     constructor() {
-        this.head = null; // {"head":null}
+        this.head = null; // {"head":null}. Also another way of removing entire list.
 
     }
 
@@ -64,16 +64,16 @@ class LinkedList {
         this.head = this.head.next;
     }
     
-    // Temp value 'previous' points to what head points to and temp value 'node' points to next node. 
+    // 2 Pointers:  Temp value 'previous' points to what head points to and temp value 'node' points to next node. 
     // Iterate till temp value node.next hits null to know we are at the end. Remove that node
     // and mark 'previous' node with null.
     removeLast() {
-        if (!this.head) { // removes the last node when list is empty
+        if (!this.head) { // Check if list empty.
             return; 
         }
 
         if (!this.head.next) { // if there's no second node.
-            this.head = null;
+            this.head = null; // This removes head.
             return;
         }
 
@@ -97,6 +97,36 @@ class LinkedList {
         } else {
             // The chain is empty so create a node.
             this.head = new Node(data);
+        }
+    }
+
+    getAt(index) {
+        let counter = 0;
+        let node = this.head;   
+        while (node) { 
+            if (counter === index) { // readhed end to index.
+                return node;
+            }
+
+            counter++;
+            node = node.next;
+        }
+        return null; // if no such index exists
+    }
+
+    // Idea is to redo the link by skipping over the node you want to remove. 
+    // If it lives in memory who cares.
+    // Use 'previous' pointer pointing to node right before the desired node to delete.
+    // Then have 'next' point to next node.
+    removeAt(index) {
+        if (!this.head) { // Check if list empty.
+            return;
+        }
+
+        // Removes first node and moves head to second node.
+        if (index === 0 ) { 
+            this.head = this.head.next;
+            return;
         }
     }
 }

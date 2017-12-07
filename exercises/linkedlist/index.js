@@ -12,7 +12,8 @@ class Node {
 
 class LinkedList {
     constructor() {
-        this.head = null;
+        this.head = null; // {"head":null}
+
     }
 
 
@@ -108,9 +109,6 @@ list.insertFirst(15);
 list.insertFirst(25);
 list.insertFirst(35);
 console.log(list); // {"head":{"data":15,"next":{"data":5,"next":null}}}
-for (let node in list.head) {
-    console.log('node:', node);
-}
 console.log(list.size()); // 2
 
 module.exports = { Node, LinkedList };

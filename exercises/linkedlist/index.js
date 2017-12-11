@@ -33,21 +33,23 @@ class LinkedList {
     }
 
     getFirst() {
-        return this.head;
+        // return this.head;
+        return this.getAt(0); // refactor
     }
 
     getLast() {
-        if (!this.head) { // If there is no head element no nodes exist.
-            return null;
-        }
+        // if (!this.head) { // If there is no head element no nodes exist.
+        //     return null;
+        // }
 
-        let node = this.head;
-        while (node) {
-            if (!node.next) {
-                return node;
-            }
-            node = node.next;
-        }
+        // let node = this.head;
+        // while (node) {
+        //     if (!node.next) {
+        //         return node;
+        //     }
+        //     node = node.next;
+        // }
+        return this.getAt(this.size() - 1); // refactor!!
     }
 
     // linked list only know nodes exist through head property so zero it out to clear the list.
@@ -127,6 +129,47 @@ class LinkedList {
         if (index === 0 ) { 
             this.head = this.head.next;
             return;
+        }
+
+        // Will be used to update the 'next' node to now point to the node after the one that is going to be deleted.
+        const previous = this.getAt(index - 1); 
+        if (!previous || !previous.next) {
+            return;
+        }
+        previous.next = previous.next.next; // leapfrogs the node in the middle that will be deleted.
+    }
+
+    insertAt(data, index) {
+        if (!this.head) { // Check if list empty. If it is insert a new node with data at index 0.
+            this. head = new Node(data);
+            return;
+        }    
+
+        if (index === 0) { // insert new node at front.
+            this.head = new Node(data, this.head);
+            return;
+        }
+
+        const previous = this.getAt(index - 1) || this.getLast(); // getLast() is special scenario where index is too high so node will need to be placed at end of list.
+        const node = new Node(data, previous.next); // makes new node and connects it to node 'previous.next that shifted to the right.
+        previous.next = node; // Move arrow to point to the new node.
+    }
+
+    forEach(fn) {
+        let node = this.head;
+        let counter = 0;
+        while(node) {
+            fn(node, counter);
+            node = node.next;
+            counter++;
+        }
+    }
+
+    *[Symbol.iterator]() {
+        let node = this.head;
+        while (node) {
+            yield node;
+            node = node.next;
         }
     }
 }

@@ -22,6 +22,8 @@ You have to be right in execises folder to run correctly.
 15. Queue Weaving. (IGNORE)
 16. stack
 17. qfroms -- Two Become One -- Queue From Stack Question.
+18. Find the Midpoint.
+19. Detecting Linked List Loops
 
 Runtime complexity describes how performant an algorithm is.
     How much more processing power/time is required to run  your algorithm if we double/increase the inputs?
@@ -49,3 +51,5 @@ You cannot iterate through a queue you have to use peek().
 Linked Lists can be referred to as a chain of nodes.
 
 null and arrays are objects in JS.
+
+Unlike a list for a tree you have to be specific of what node you want to add data to.

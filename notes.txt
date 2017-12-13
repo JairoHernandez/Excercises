@@ -24,6 +24,9 @@ You have to be right in execises folder to run correctly.
 17. qfroms -- Two Become One -- Queue From Stack Question.
 18. Find the Midpoint.
 19. Detecting Linked List Loops
+20. tree
+21. levelwidth -- tree
+22. bst -- binary search tree
 
 Runtime complexity describes how performant an algorithm is.
     How much more processing power/time is required to run  your algorithm if we double/increase the inputs?

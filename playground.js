@@ -6,13 +6,26 @@ function reverse(str) {
 
 console.log(reverse('jairo'));
 
-
+/** if ... is passed as parameter comma values are placed into new array
+ * if ... is pased as argument array is removed and passed in as individual comma values.
+ */
 function jairo(...args) {
     console.log(args);
     console.log(args[args.length - 1]);
 }
 
-jairo('1', '2', '3');
+jairo('1', '2', '3'); // [ '1', '2', '3' ] and 3
+jairo(['1', '2', '3'], ['4', '5', '6']); // [ [ '1', '2', '3' ], [ '4', '5', '6' ] ] and [ '4', '5', '6' ]
+console.log('------');
+
+let array1 = [ 7 ];
+let array2 = [ 8, 9, 10 ];
+array1.push(...array2); //[ 7, 8, 9, 10 ]
+// array1.push(array2); // [ 7, [ 8, 9, 10 ] ]
+console.log(array1);
+array1.shift(); // [ 8, 9, 10 ]
+console.log(array1);
+console.log('------');
 
 function foo1()
 {

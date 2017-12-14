@@ -89,3 +89,19 @@ for (let value of generator) {
     values.push(value);
 }
 console.log('values:', values);
+
+/** RECURSION
+ * 1. Identify base case to tell us when to stop recursion process.
+ * 2. Change the argument passed into function to reach the base case.
+ */
+console.log('----RECURSION---')
+function printNumber(n) {
+    if (n === 0) { // Base case.
+        return;
+    }
+
+    console.log(n);
+    printNumber(n - 1); // Change the argument to reach base case.
+}
+
+printNumber(5);

@@ -27,6 +27,7 @@ You have to be right in execises folder to run correctly.
 20. tree
 21. levelwidth -- tree
 22. bst -- binary search tree
+24. events
 
 Runtime complexity describes how performant an algorithm is.
     How much more processing power/time is required to run  your algorithm if we double/increase the inputs?

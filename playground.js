@@ -105,3 +105,10 @@ function printNumber(n) {
 }
 
 printNumber(5);
+
+console.log('----forEach---')
+let arr = [1, 2, 3];
+arr.forEach( function (element, index) {
+    console.log(`index: ${index} = ${element} `);
+});
+console.log(arr); // [ 1, 2, 3 ]

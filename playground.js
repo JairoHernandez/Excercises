@@ -46,63 +46,32 @@ function foo2()
 console.log(foo1());
 console.log(foo2());
 
-function *numbers() {
-    const result = 1 + 1;
-    return 20 + (yield result);
-}
+console.log('+++++++++++++++++++++++++++++++++');
 
-/** GENERATORS */
+var a = 'fcrxzwscanmligyxyvym';
+var b = 'jxwtrhvujlmrpdoqbisbwhmgpmeoke';
 
-const generator1 = numbers() 
-console.log('Generator1:', generator1); // Generator: {}
-console.log('Generator1:', generator1.next()); // Generator: { value: 2, done: false }
-// The portion (yield result) is now replaced with 10.
-console.log('Generator1:', generator1.next(10)); // Generator: { value: 30, done: true }
+var aclean = a.split('').sort().join('').trim();
+var bclean = b.split('').sort().join('').trim();
 
-function *list() {
-    yield 1;
-    yield 2;
-    yield 3;
-}
+var acleanArr = aclean.split('');
+var bcleanArr = bclean.split('');
+var count = 0;
 
-const generator2 = list();
-console.log('Generator2:', generator2.next()); // { value: 1, done: false }
-console.log('Generator2:', generator2.next()); // { value: 2, done: false }
-console.log('Generator2:', generator2.next()); // { value: 3, done: false }
-console.log('Generator2:', generator2.next()); // { value: undefined, done: true }
-
-function *numbersAgain() {
-    yield 1;
-    yield 2;
-    yield *moreNumbersAgain();
-    yield 5;
-}
-
-function *moreNumbersAgain() {
-    yield 3;
-    yield 4;
-}
-
-const generator = numbersAgain();
-
-const values = [];
-for (let value of generator) {
-    values.push(value);
-}
-console.log('values:', values);
-
-/** RECURSION
- * 1. Identify base case to tell us when to stop recursion process.
- * 2. Change the argument passed into function to reach the base case.
- */
-console.log('----RECURSION---')
-function printNumber(n) {
-    if (n === 0) { // Base case.
-        return;
+for (let index=0; index < bclean.length; index++) {
+    
+    if (acleanArr.indexOf(bcleanArr[index]) === -1) {
+        // console.log(bcleanArr[index] + ' not in acleanArr');
+        count += 1;
     }
+}
 
-    console.log(n);
-    printNumber(n - 1); // Change the argument to reach base case.
+for (let index=0; index < aclean.length; index++) {
+
+    if (bcleanArr.indexOf(acleanArr[index]) === -1) {
+        // console.log(acleanArr[index] + ' not in bcleanArr');
+        count += 1;
+    }
 }
 
 printNumber(5);
@@ -126,3 +95,4 @@ let moveBack = howmany => {
 
 moveBack(2);
 
+console.log(count);

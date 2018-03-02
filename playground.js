@@ -1,3 +1,4 @@
+'use strict';
 function reverse(str) {
     let reversed = '';
 
@@ -112,3 +113,16 @@ arr.forEach( function (element, index) {
     console.log(`index: ${index} = ${element} `);
 });
 console.log(arr); // [ 1, 2, 3 ]
+
+
+console.log('++++++++++Move first numbers to back of array +++++++++++++')
+let moveBack = howmany => {
+    let data = [1, 2, 3, 4];
+    let moveme = data.slice(0, howmany);
+    let remainder = data.slice(2);
+    remainder.push(...moveme);
+    console.log(remainder.join(' '));
+};
+
+moveBack(2);
+

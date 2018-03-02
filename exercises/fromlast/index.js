@@ -11,6 +11,22 @@
 //    list.insertLast('d');
 //    fromLast(list, 2).data // 'b'
 
-function fromLast(list, n) {}
+function fromLast(list, n) {
+
+    let slow = list.getFirst();
+    let fast = list.getFirst();
+
+    while (n > 0) {
+        fast = fast.next; // moves by 1
+        n--;
+    }
+
+    while (fast.next) { // while a next node to visit
+        slow = slow.next;
+        fast = fast.next;
+    }
+
+    return slow; // slow now points to n spaces from left.
+}
 
 module.exports = fromLast;

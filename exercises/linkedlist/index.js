@@ -12,6 +12,7 @@ class Node {
 
 class LinkedList {
     constructor() {
+        // head is just a property that points to to the next node or null if initializing list for the first time.
         this.head = null; // {"head":null}. Also another way of removing entire list.
 
     }

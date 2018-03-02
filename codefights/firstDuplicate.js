@@ -16,7 +16,7 @@
 // For a = [2, 4, 3, 5, 1], the output should be
 // firstDuplicate(a) = -1.
 
-var a = [2, 3, 3, 1, 5, 2];
+var a = [2, 3, 3, 1, 5, 2, 3, 3, 4, 4];
 
 function findDuplicates(data) {
 
@@ -27,7 +27,7 @@ function findDuplicates(data) {
 
         // Find if there is a duplicate or not by starting search
         // for that element at its index position + 1.
-        if (data.indexOf(element, index + 1) > -1) {
+        if (data.indexOf(element, index + 1) > -1) { // Look for element starting at index + 1 and if found proceed.
 
             dupIndex.push(data.indexOf(element, index + 1));
 
@@ -38,12 +38,13 @@ function findDuplicates(data) {
         }
     });
 
-    // return result; // Returns array of duplicates.
+    return result; // Returns array of duplicates.
 
-    if (dupIndex[0] < dupIndex[1]) {
-        return data[dupIndex[0]];
-    }
-    return data[dupIndex[1]];
+    // return first found duplicate value.
+    // if (dupIndex[0] < dupIndex[1]) {
+    //     return data[dupIndex[0]];
+    // }
+    // return data[dupIndex[1]];
 }
 
 console.log(findDuplicates(a));

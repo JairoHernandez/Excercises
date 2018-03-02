@@ -46,6 +46,25 @@ function foo2()
 console.log(foo1());
 console.log(foo2());
 
+console.log('----forEach---')
+let arr = [1, 2, 3];
+arr.forEach( function (element, index) {
+    console.log(`index: ${index} = ${element} `);
+});
+console.log(arr); // [ 1, 2, 3 ]
+
+
+console.log('++++++++++Move first numbers to back of array +++++++++++++')
+let moveBack = howmany => {
+    let data = [1, 2, 3, 4];
+    let moveme = data.slice(0, howmany);
+    let remainder = data.slice(2);
+    remainder.push(...moveme);
+    console.log(remainder.join(' '));
+};
+
+moveBack(2);
+
 console.log('+++++++++++++++++++++++++++++++++');
 
 var a = 'fcrxzwscanmligyxyvym';
@@ -74,25 +93,12 @@ for (let index=0; index < aclean.length; index++) {
     }
 }
 
-printNumber(5);
-
-console.log('----forEach---')
-let arr = [1, 2, 3];
-arr.forEach( function (element, index) {
-    console.log(`index: ${index} = ${element} `);
-});
-console.log(arr); // [ 1, 2, 3 ]
-
-
-console.log('++++++++++Move first numbers to back of array +++++++++++++')
-let moveBack = howmany => {
-    let data = [1, 2, 3, 4];
-    let moveme = data.slice(0, howmany);
-    let remainder = data.slice(2);
-    remainder.push(...moveme);
-    console.log(remainder.join(' '));
-};
-
-moveBack(2);
-
 console.log(count);
+
+console.log('+++++++++++++++++++++++++++++++++');
+let obj = { name1: 'jairo', name2: 'odie', name3: 'rose'};
+let objcount = 0;
+for (let key in obj) {
+    objcount += 1;
+}
+console.log('obj count: ', objcount);

@@ -102,3 +102,22 @@ for (let key in obj) {
     objcount += 1;
 }
 console.log('obj count: ', objcount);
+
+console.log('+++++++++++++++++++++++++++++++++');
+
+function findNumber(arr, k) {
+    
+    let reply = 'NO';
+
+    for (let element in arr) {
+        
+        if (element === k);
+            reply = 'YES';
+    }
+
+    return reply;
+
+}
+
+arr = [1,2,3];
+console.log(findNumber(arr, 4));
